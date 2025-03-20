@@ -140,8 +140,8 @@ dns:
     - https://dns.alidns.com/dns-query
   # namesever尽量用运营商提供的DNS
   nameserver:
-    - 61.139.2.69
-    - 218.6.200.139
+    - 223.5.5.5
+    - 119.29.29.29
  
 # 出站策略
 # 注意锚点必须放在引用的上方，可以集中把锚点全部放yaml的顶部。
@@ -176,7 +176,7 @@ proxy-groups:
 # 规则匹配
 # 此规则部分没有做防泄露处理，因为弊严重大于利！
 rules:
-  - DOMAIN-SUFFIX,blog.lkurococ.top,🎯 直连
+  - DOMAIN-SUFFIX,localhost,🎯 直连
   - IP-CIDR,10.0.0.0/8,🎯 直连
   - IP-CIDR,172.16.0.0/12,🎯 直连
   - IP-CIDR,192.168.0.0/16,🎯 直连
@@ -184,8 +184,8 @@ rules:
   - IP-CIDR,127.0.0.0/8,🎯 直连
   - GEOSITE,steam@cn,🎯 直连
   - GEOSITE,category-games@cn,🎯 直连
-  - RULE-SET,private_domain,直连
-  - RULE-SET,steam,直连
+  - RULE-SET,private_domain,🎯 直连
+  - RULE-SET,steam,🎯 直连
   - RULE-SET,apple_domain,🍎 Apple
   - RULE-SET,proxylite,🚀 默认代理
   - RULE-SET,ai,🤖 ChatGPT
